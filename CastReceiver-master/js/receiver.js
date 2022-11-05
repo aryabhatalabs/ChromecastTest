@@ -252,6 +252,14 @@ playerManager.addEventListener(
             
             textTracksManager.setTextTrackStyle(textTrackStyle)
         }
+      else if(json.action==="PLAYBACK_SPEED"){
+
+         const video = document.getElementById('castMediaElement');
+         if(video!=undefined){
+            video.playbackRate = json.speed;
+          }
+
+        }
 
   }
 
